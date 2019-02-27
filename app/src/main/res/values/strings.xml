@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Fragmentetal</string>
+
+    <string name="camfragment_txt">Uzņem žilbinošas bildes te!</string>
+
+    <string name="takeapic_btn">Fotografēt</string>
+
+    <string name="contentdesc_for_imgview">Uzņemtais attēls</string>
+
+    <string name="playing_btn">Atskaņo</string>
+    <string name="record_btn">Ieraksti</string>
+    <string name="stopRecording_btn">Pārtraukt</string>
+    <string name="recordedFailName_btn">Ierakstītā faila nosaukums</string>
+    <string name="playAudio_btn">Atskaņot</string>
+    <string name="stopAudioPlayback_btn">Pārtraukt atskaņot</string>
+</resources>

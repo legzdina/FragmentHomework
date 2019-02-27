@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="148dp"
+        android:text="@string/camfragment_txt"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTakePhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:contentDescription="@string/contentdesc_for_imgview"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTakePhoto"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[8]" />
+
+    <Button
+        android:id="@+id/buttonTakePhoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:background="@color/happySunny"
+        android:onClick="dispatchTakePictureIntent"
+        android:text="@string/takeapic_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPhoto">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout_gridtableLayout"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="4dp"
+                    android:columnWidth="220dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="1dp"
+                    android:numColumns="3"
+                    android:scrollbarAlwaysDrawHorizontalTrack="false"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:verticalSpacing="2dp">
+                </GridView>
+            </LinearLayout>
+        </FrameLayout>
+    </HorizontalScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
